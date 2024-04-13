@@ -1,0 +1,23 @@
+<ion-content color="light">
+  <ion-list class="itens">
+
+    <ion-item>
+      <ion-label class="item-header" aria-label="text"><strong>Nome</strong></ion-label>
+      <ion-label class="item-header" type="text"><strong>Preço</strong></ion-label>
+      <ion-label class="item-header" type="text"><strong>Qtde</strong></ion-label>
+      <ion-label class="item-header"><strong>Ações</strong></ion-label>
+    </ion-item>
+
+    <ion-item *ngFor="let fruta of frutas" class="list">
+
+      <ion-label class="item" aria-label="text">{{ fruta.nome }}</ion-label>
+      <ion-label class="item" type="number">R${{ fruta.preco }}</ion-label>
+      <ion-label class="item" type="number">{{ fruta.quantidade }}</ion-label>
+      <ion-button color="danger" (click)="excluirFruta(fruta)">Excluir</ion-button>
+      <ion-button color="warning" (click)="editarFruta(fruta)">Editar</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="adicionarFruta()">Adicionar Item</ion-button>
+
+</ion-content>

@@ -1,0 +1,23 @@
+:host {
+
+    ion-toolbar {
+      --background: #5d1575;
+    }
+
+
+  
+  
+    .toolbar {
+      display: flex;
+
+      .buttonTitle {
+        margin-left: 1px;
+      }
+  
+      .button {
+        font-size: medium;
+        font-weight: 500;
+        --color: #f1f1f1;
+      }
+    }
+  }

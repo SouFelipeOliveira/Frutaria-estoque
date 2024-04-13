@@ -1,0 +1,22 @@
+
+ion-content {
+
+    .itens {
+        margin-top: 20vh;
+    }
+
+    ion-item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .item, .item-header {
+        flex: 1 0 0;
+        text-align: center;
+        font-size: small;
+        margin-left: -5px;
+    }
+}
+  
+  
