@@ -23,8 +23,6 @@ import { FormsModule } from '@angular/forms';
 export class EstoqueComponent {
 
   frutas: any[] = [];
-
-  columns: String[] = ["Nome", "Preço", "Quantidade"]
   
   constructor(private alertController: AlertController ) { }
 
