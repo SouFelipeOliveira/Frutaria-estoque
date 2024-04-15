@@ -9,15 +9,21 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './estoque.component.html',
   styleUrls: ['./estoque.component.scss'],
   standalone: true,
-  imports: [IonRow, IonGrid, IonCol, IonIcon, IonListHeader, IonButton, 
+  imports: [
+    IonRow, 
+    IonGrid, 
+    IonCol, 
+    IonIcon, 
+    IonListHeader, 
+    IonButton, 
     IonInput, 
     IonLabel, 
     IonList, 
     IonContent,
-     IonItem, 
-     IonLabel, 
-     CommonModule,
-     FormsModule
+    IonItem, 
+    IonLabel, 
+    CommonModule,
+    FormsModule
   ]
 })
 export class EstoqueComponent {
