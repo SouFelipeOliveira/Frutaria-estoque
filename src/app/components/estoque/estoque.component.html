@@ -2,19 +2,28 @@
   <ion-list class="itens">
 
     <ion-item>
-      <ion-label class="item-header" aria-label="text"><strong>Nome</strong></ion-label>
-      <ion-label class="item-header" type="text"><strong>Preço</strong></ion-label>
-      <ion-label class="item-header" type="text"><strong>Qtde</strong></ion-label>
-      <ion-label class="item-header"><strong>Ações</strong></ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col>Nome</ion-col>
+          <ion-col>Preço</ion-col>
+          <ion-col>Qtde</ion-col>
+          <ion-col>Ações</ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item>
 
     <ion-item *ngFor="let fruta of frutas" class="list">
-
-      <ion-label class="item" aria-label="text">{{ fruta.nome }}</ion-label>
-      <ion-label class="item" type="number">R${{ fruta.preco }}</ion-label>
-      <ion-label class="item" type="number">{{ fruta.quantidade }}</ion-label>
-      <ion-button color="danger" (click)="excluirFruta(fruta)">Excluir</ion-button>
-      <ion-button color="warning" (click)="editarFruta(fruta)">Editar</ion-button>
+      <ion-grid>
+        <ion-row>
+          <ion-col>{{ fruta.nome }}</ion-col>
+          <ion-col>R${{ fruta.preco }}</ion-col>
+          <ion-col>{{ fruta.quantidade }}</ion-col>
+          <ion-col class="buttons">
+            <ion-button color="danger" (click)="excluirFruta(fruta)">Delete</ion-button>
+            <ion-button color="warning" (click)="editarFruta(fruta)">Edit</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item>
   </ion-list>
 

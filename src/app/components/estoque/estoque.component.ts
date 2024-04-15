@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonContent, IonList, IonItem, IonLabel, IonInput, IonButton, IonListHeader, IonIcon } from '@ionic/angular/standalone';
+import { IonContent, IonList, IonItem, IonLabel, IonInput, IonButton, IonListHeader, IonIcon, IonCol, IonGrid, IonRow } from '@ionic/angular/standalone';
 import { AlertController } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './estoque.component.html',
   styleUrls: ['./estoque.component.scss'],
   standalone: true,
-  imports: [IonIcon, IonListHeader, IonButton, 
+  imports: [IonRow, IonGrid, IonCol, IonIcon, IonListHeader, IonButton, 
     IonInput, 
     IonLabel, 
     IonList, 
@@ -22,13 +22,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class EstoqueComponent {
 
-  frutas: any[] = [
-    { index: 1, nome: 'Banana', preco: 25.0, quantidade: 10 },
-    { index: 2, nome: 'Maçã', preco: 25.0, quantidade: 5 },
-    { index: 3, nome: 'Pera', preco: 25.0, quantidade: 3 },
-    { index: 4, nome: 'Uva', preco: 25.0, quantidade: 7 },
-    { index: 5, nome: 'Morango', preco: 25.0, quantidade: 2 }
-  ];
+  frutas: any[] = [];
 
   columns: String[] = ["Nome", "Preço", "Quantidade"]
   
